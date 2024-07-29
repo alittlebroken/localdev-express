@@ -1,0 +1,18 @@
+services:
+  notes-api:
+    tty: true
+    stdin_open: true
+    build:
+      context: .
+    ports:
+      - 3000:3000
+      - 9229:9229
+    environment:
+      - PORT=3000
+    volumes:
+      - ./:/code
+    command: >
+     bash -c "npm init -y && npm i -D nodemon supertest jest
+     && npm i express body-parser pg cors
+     && mkdir -p src/{controllers,routes,models,utils,__tests__}
+     && bash"
