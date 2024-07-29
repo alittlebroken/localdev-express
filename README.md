@@ -32,7 +32,7 @@ is used from to persist the app code you develop.
 
 - Clone the github repo
 ```cmd
-git clone https://github.com/alittlebroken/localdev_nodeexpress.git
+git clone https://github.com/alittlebroken/localdev-express.git
 ```
 
 - Update project folder name
