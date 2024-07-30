@@ -4,7 +4,8 @@
   "description": "A simple local development server utilising docker for building express apps with nodeJS to use in Windows 11.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "test": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
