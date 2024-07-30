@@ -41,6 +41,11 @@ ren localdev_nodeexpress <project_name>
 cd <project_name>
 ```
 
+- Update the remote git repo to your new repo location
+```cmd
+git remote set-url origin <new remote repo>
+```
+
 - Edit the docker-compose.dev.yaml file and set the service names to your desired names
 - Add any environment vars or other options like mounted volumes that you require
 
