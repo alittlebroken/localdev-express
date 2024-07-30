@@ -54,6 +54,11 @@ git remote set-url origin <new remote repo>
 docker-compose -f docker-compose.dev.yaml up --build -d
 ```
 
+- Start containers after first build
+```cmd
+docker-compose -f focker-compose.dev.yaml up -d
+```
+
 - Attach to an running container
 ```cmd
 docker-compose -f docker-compose.dev.yaml exec <service name> bash
