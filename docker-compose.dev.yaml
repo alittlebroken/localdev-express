@@ -11,8 +11,22 @@ services:
       - PORT=3000
     volumes:
       - ./:/code
+    depends_on:
+      - notes-db
     command: >
      bash -c "npm init -y && npm i -D nodemon supertest jest
      && npm i express body-parser pg cors
      && mkdir -p src/{controllers,routes,models,utils,__tests__}
      && bash"
+  notes-db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: notesapp
+      POSTGRES_USER: notesapp
+      POSTGRES_DB: notes
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./data:/var/lib/postgresql/data
